@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.InMemory;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Sqlite;
+using System.ComponentModel;
 
 namespace  VinylStore
 {
@@ -234,13 +235,27 @@ namespace  VinylStore
         }
 
 
-
+        public void PrintLogo()
+        {
+            Console.WriteLine($"██╗   ██╗██╗███╗   ██╗██╗   ██╗██╗     ███████╗████████╗ ██████╗ ██████╗ ███████╗\r\n██║   ██║██║████╗  ██║╚██╗ ██╔╝██║     ██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗██╔════╝\r\n██║   ██║██║██╔██╗ ██║ ╚████╔╝ ██║     ███████╗   ██║   ██║   ██║██████╔╝█████╗  \r\n╚██╗ ██╔╝██║██║╚██╗██║  ╚██╔╝  ██║     ╚════██║   ██║   ██║   ██║██╔══██╗██╔══╝  \r\n ╚████╔╝ ██║██║ ╚████║   ██║   ███████╗███████║   ██║   ╚██████╔╝██║  ██║███████╗\r\n  ╚═══╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚══════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝\r\n                                                                                 ");
+            Console.WriteLine("===================================================================================");
+        }
 
         public void MainMenu()
         {
-            
+            int choice;
+            PrintLogo();
+            Console.WriteLine("Please Input"); // I will continue, but i'm too tired to do it now
+
         }
 
     }
-
+    public static class Program
+    {
+        public static void Main()
+        {
+            var instance = new VinylManager();
+            instance.MainMenu();
+        }
+    }
 }
